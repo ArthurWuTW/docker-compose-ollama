@@ -1,4 +1,4 @@
-arr=(` docker-compose ps | awk 'NR>1 {split($0,arr," "); print arr[1]}' `)
+arr=(` docker-compose ps | awk 'NR>2 {split($0,arr," "); print arr[1]}' `)
 echo "#######################################################"
 echo "Which container you want to enter?"
 for((i=0;i<${#arr[@]};i++));
