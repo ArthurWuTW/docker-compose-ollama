@@ -9,4 +9,4 @@ echo "Sleep 5 sec"
 sleep 5
 
 echo "Health test"
-curl http://localhost:11434/api/generate -d '{"model": "llama3:8b-instruct-q8_0", "prompt": "hello"}'
+curl http://localhost:11434/api/generate -d '{"model": "llama3:8b-instruct-q8_0", "stream": false, "prompt": "hello"}'
