@@ -27,4 +27,5 @@ services:
   langchain-env:
     build:
       context: ./langchain-image
-  
+    ports:
+      - "5555:5000"

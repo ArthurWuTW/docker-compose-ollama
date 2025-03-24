@@ -12,10 +12,13 @@ RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN python3.12 get-pip.py
 RUN rm get-pip.py
 
-RUN pip3.12 install langchain
+RUN pip3.12 install langchain==0.2.0
 RUN pip3.12 install flask --ignore-installed
 RUN pip3.12 install langchain-community
+RUN pip3.12 install langchain_ollama
 
 COPY infinite-loop /infinite-loop
+COPY app.py /app.py
+COPY app_ollama_webui.py /app_ollama_webui.py
 
 ENTRYPOINT ["/infinite-loop"]
