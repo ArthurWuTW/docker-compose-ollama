@@ -32,7 +32,7 @@ def generate():
 
         answer = llm_chain.invoke(question)
         print(answer)
-        return jsonify({"a": answer})
+        return jsonify(answer)
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
