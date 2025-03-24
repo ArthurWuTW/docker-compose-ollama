@@ -12,6 +12,9 @@ RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN python3.12 get-pip.py
 RUN rm get-pip.py
 
+RUN pip3.12 install langchain
+RUN pip3.12 install flask --ignore-installed
+
 
 COPY infinite-loop /infinite-loop
 
