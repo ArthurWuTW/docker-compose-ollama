@@ -14,7 +14,7 @@ RUN rm get-pip.py
 
 RUN pip3.12 install langchain
 RUN pip3.12 install flask --ignore-installed
-
+RUN pip3.12 install langchain-community
 
 COPY infinite-loop /infinite-loop
 
